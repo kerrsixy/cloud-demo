@@ -56,5 +56,10 @@
             <artifactId>fegin-service</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
+        <!--httpClient的依赖 -->
+        <dependency>
+            <groupId>io.github.openfeign</groupId>
+            <artifactId>feign-httpclient</artifactId>
+        </dependency>
     </dependencies>
 </project>

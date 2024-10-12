@@ -16,3 +16,4 @@ spring:
             - Path=/order-service/**
           filters:
             - StripPrefix=1
+            - AddRequestHeader=Authorization, Hello World! # 添加请求头

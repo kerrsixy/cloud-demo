@@ -16,3 +16,25 @@ mybatis:
   mapper-locations: classpath:mapper/*Mapper.xml
   configuration:
     map-underscore-to-camel-case: true
+logging:
+  level:
+    com.zjp.feginservice.client: DEBUG
+feign:
+  # 线程池优化
+  httpclient:
+    enabled: true # 开启feign对HttpClient的支持
+    max-connections: 200 # 最大的连接数
+    max-connections-per-route: 50 # 每个路径的最大连接数
+  client:
+    config:
+      # feign日志配置
+      # 全局配置
+      default:
+        logger-level: BASIC
+        connect-timeout: 5000 # 请求连接的超时时间
+        read-timeout: 5000 # 请求响应的超时时间
+      # 局部配置
+      user-service:
+        logger-level: BASIC
+        connect-timeout: 5000 # 请求连接的超时时间
+        read-timeout: 5000 # 请求响应的超时时间
